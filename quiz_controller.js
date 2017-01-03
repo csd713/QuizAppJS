@@ -18,8 +18,9 @@ Quiz.prototype.isEnded = function () {
 
 //Check if answer is correct or not
 Quiz.prototype.guess = function (answer) {
-    this.questionIndex++;
+
     if (this.getQuestionIndex().correctAnswer(answer)) {
         this.score += 5;
     }
+    this.questionIndex++;
 }
